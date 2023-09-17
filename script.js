@@ -122,15 +122,22 @@ document.querySelectorAll('.board-item').forEach(element => {
 			timer = setTimeout(() => {
 				var pos = getOffset(event.target);
 				var rec = event.target.querySelector('img').getBoundingClientRect();
-				document.querySelector('.preview-container').style.top = (pos.y - ((rec.bottom - rec.top) * 2) - 5) + 'px';
-				if (((rec.right - rec.left) / 2) < 50) {
-					// There has got to be a nicer way of doing this math but it works so /shrug
-					document.querySelector('.preview-container').style.left = (pos.x - ((rec.right - rec.left) / 2)) + (-1 * (((rec.right - rec.left) / 2) - 50)) - 8 + 'px';
-				} else {
-					document.querySelector('.preview-container').style.left = (pos.x - ((rec.right - rec.left) / 2)) - 8 + 'px';
+				var newPosY = (pos.y - ((rec.bottom - rec.top) * 3.5) + 5);
+				var newPosX = (pos.x - (((rec.right - rec.left) * 3.5) / 2)) + ((rec.right - rec.left) / 2);
+				if (newPosY < 8) {
+					newPosY = event.target.getBoundingClientRect().bottom + 10;
+				}
+				if (newPosX < 8) {
+					newPosX = 8;
+				}
+				document.querySelector('.preview-container').style.top = newPosY + 'px';
+				document.querySelector('.preview-container').style.left = newPosX + 'px';
+				document.querySelector('.preview-container img').src = event.target.querySelector('img').src;
+				// Check for overflow to the right of the screen and fix if able
+				if (document.querySelector('.preview-container img').getBoundingClientRect().right > window.innerWidth - 25) {
+					document.querySelector('.preview-container').style.left = newPosX - (document.querySelector('.preview-container img').getBoundingClientRect().right - window.innerWidth) - 25 + 'px';
 				}
 				document.querySelector('.preview-container').style.visibility = 'visible';
-				document.querySelector('.preview-container img').src = event.target.querySelector('img').src;
 			}, 2000);
 		}
 	});
