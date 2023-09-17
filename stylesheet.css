@@ -1,0 +1,141 @@
+body {
+	background: #777;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+#debugButton {
+	background: none;
+	border: none;
+	color: #00000000;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+#debugButton:hover {
+	background: #fff;
+	color: #ff0000ff;
+}
+
+.grid {
+	position: relative;
+}
+
+.board-item {
+	background: #fff;
+	color: #fff;
+	cursor: pointer;
+	display: block;
+	height: 100px;
+	margin: 5px;
+	min-width: 50px;
+	position: absolute;
+	z-index: 1;
+}
+
+.board-item.muuri-item-dragging {
+	z-index: 3;
+}
+
+.board-item.muuri-item-releasing {
+	z-index: 2;
+}
+
+.board-item.muuri-item-hidden {
+	z-index: 0;
+}
+
+.board-item-content {
+	position: relative;
+	height: 100px;
+	min-width: 80px;
+}
+
+.board-item-content img {
+	background: fff;
+	max-height: 90px;
+	max-width: 130px;
+	padding: 5px;
+	position: relative;
+	right: -50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.board-column {
+	background: #444;
+	margin-bottom: 5px;
+	margin-left: 100px;
+	transform: translateX(0px) translateY(0px) !important;
+}
+
+.board-column-header {
+	align-items: center;
+	background: #333;
+	color: #000;
+	display: flex;
+	font-weight: bold;
+	height: 100%;
+	justify-content: center;
+	left: -95px;
+	position: absolute;
+	text-transform: uppercase;
+	width: 95px;
+}
+
+.bank {
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.board-column-content {
+	min-height: 110px;
+}
+
+.rank-s .board-column-header {
+	background: #FF7F7F;
+}
+
+.rank-a .board-column-header {
+	background: #FFBE7F;
+}
+
+.rank-b .board-column-header {
+	background: #FFDF7F;
+}
+
+.rank-c .board-column-header {
+	background: #FFFF7F;
+}
+
+.rank-d .board-column-header {
+	background: #BEFE7E;
+}
+
+.rank-f .board-column-header {
+	background: #7FFE7F;
+}
+
+.spacer {
+	height: 10px;
+}
+
+.preview-container {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+	visibility: hidden;
+}
+
+.preview-container img {
+	max-height: 180px;
+	max-width: 260px;
+	padding: 8px;
+	background-color: #fff;
+	border: 3px solid #000;
+}
