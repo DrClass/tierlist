@@ -15,7 +15,7 @@ var gridF = initGrid(".rank-f .board-column-content");
 var gridU = initGrid(".rank-u .board-column-content");
 var gridBank = initGrid(".bank .board-column-content");
 
-document.querySelector('#scriptVersion').innerHTML = "Script version: 1.2.0";
+document.querySelector('#scriptVersion').innerHTML = "Script version: 1.3.0";
 
 function initGrid(gridId) {
 	var grid = new Muuri(gridId, {
