@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Infernum Boss Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+	</head>
+	<body>
+		<h1 id="infernum">Raven's Infernum Boss Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/king_slime.png" class="force-scale" />
+						<img src="./images/infernum/king_slime.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/desert_scourge.png" class="force-scale" />
+						<img src="./images/infernum/desert_scourge.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/eye_of_cthulhu.png" class="force-scale" />
+						<img src="./images/infernum/eye_of_cthulhu.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/crabulon.png" class="force-scale" />
+						<img src="./images/infernum/crabulon.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/eater_of_worlds.png" class="force-scale" />
+						<img src="./images/infernum/eater_of_worlds.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/brain_of_cthulhu.png" class="force-scale" />
+						<img src="./images/infernum/brain_of_cthulhu.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/hive_mind.png" class="force-scale" />
+						<img src="./images/infernum/hive_mind.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/perforator_hive.png" class="force-scale" />
+						<img src="./images/infernum/perforator_hive.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/queen_bee.png" class="force-scale" />
+						<img src="./images/infernum/queen_bee.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/deerclops.png" class="force-scale" />
+						<img src="./images/infernum/deerclops.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/skeletron.png" class="force-scale" />
+						<img src="./images/infernum/skeletron.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/slime_god.png" class="force-scale" />
+						<img src="./images/infernum/slime_god.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/wall_of_flesh.png" class="force-scale" />
+						<img src="./images/infernum/wall_of_flesh.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/queen_slime.png" class="force-scale" />
+						<img src="./images/infernum/queen_slime.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/cryogen.png" class="force-scale" />
+						<img src="./images/infernum/cryogen.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/twins.png" class="force-scale" />
+						<img src="./images/infernum/twins.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/aquatic_scourge.png" class="force-scale" />
+						<img src="./images/infernum/aquatic_scourge.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/destroyer.png" class="force-scale" />
+						<img src="./images/infernum/destroyer.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/brimstone_elemental.png" class="force-scale" />
+						<img src="./images/infernum/brimstone_elemental.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/skeletron_prime.png" class="force-scale" />
+						<img src="./images/infernum/skeletron_prime.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/calamitas_clone.png" class="force-scale" />
+						<img src="./images/infernum/calamitas_clone.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/plantera.png" class="force-scale" />
+						<img src="./images/infernum/plantera.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="23">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/leviathan.png" class="force-scale" />
+						<img src="./images/infernum/leviathan.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="24">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/astrum_aureus.png" class="force-scale" />
+						<img src="./images/infernum/astrum_aureus.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="25">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/golem.png" class="force-scale" />
+						<img src="./images/infernum/golem.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="26">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/duke_fishron.png" class="force-scale" />
+						<img src="./images/infernum/duke_fishron.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="27">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/plaguebringer_goliath.png" class="force-scale" />
+						<img src="./images/infernum/plaguebringer_goliath.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="28">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/empress_of_light.png" class="force-scale" />
+						<img src="./images/infernum/empress_of_light.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="29">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/ravager.png" class="force-scale" />
+						<img src="./images/infernum/ravager.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/lunatic_cultist.png" class="force-scale" />
+						<img src="./images/infernum/lunatic_cultist.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="31">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/astrum_deus.png" class="force-scale" />
+						<img src="./images/infernum/astrum_deus.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="32">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/moon_lord.png" class="force-scale" />
+						<img src="./images/infernum/moon_lord.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="33">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/profaned_guardians.png" class="force-scale" />
+						<img src="./images/infernum/profaned_guardians.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="34">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/dragonfolly.png" class="force-scale" />
+						<img src="./images/infernum/dragonfolly.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="35">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/providence,_the_profaned_goddess.png" class="force-scale" />
+						<img src="./images/infernum/providence,_the_profaned_goddess.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="36">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/storm_weaver.png" class="force-scale" />
+						<img src="./images/infernum/storm_weaver.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="37">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/ceaseless_void.png" class="force-scale" />
+						<img src="./images/infernum/ceaseless_void.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="38">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/signus,_envoy_of_the_devourer.png" class="force-scale" />
+						<img src="./images/infernum/signus,_envoy_of_the_devourer.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="39">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/polterghast.png" class="force-scale" />
+						<img src="./images/infernum/polterghast.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="40">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/old_duke.png" class="force-scale" />
+						<img src="./images/infernum/old_duke.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="41">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/devourer_of_gods.png" class="force-scale" />
+						<img src="./images/infernum/devourer_of_gods.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="42">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/yharon,_dragon_of_rebirth.png" class="force-scale" />
+						<img src="./images/infernum/yharon,_dragon_of_rebirth.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="43">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/exo_mechs.png" class="force-scale" />
+						<img src="./images/infernum/exo_mechs.png" class="preview-image" />
+					</div>
+				</div>
+				<div class="board-item" data-id="44">
+					<div class="board-item-content">
+						<img src="./images/infernum/icons/supreme_witch,_calamitas.png" class="force-scale" />
+						<img src="./images/infernum/supreme_witch,_calamitas.png" class="preview-image" />
+					</div>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+			</div>
+		</div>
+	</body>
+	<script src="./script.js"></script>
+</html>

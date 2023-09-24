@@ -12,7 +12,10 @@ var gridB = initGrid(".rank-b .board-column-content");
 var gridC = initGrid(".rank-c .board-column-content");
 var gridD = initGrid(".rank-d .board-column-content");
 var gridF = initGrid(".rank-f .board-column-content");
+var gridU = initGrid(".rank-u .board-column-content");
 var gridBank = initGrid(".bank .board-column-content");
+
+document.querySelector('#scriptVersion').innerHTML = "Script version: 1.2.0";
 
 function initGrid(gridId) {
 	var grid = new Muuri(gridId, {
@@ -20,11 +23,8 @@ function initGrid(gridId) {
 		layoutOnInit: false,
 		dragEnabled: true,
 		dragContainer: dragContainer,
-		layout: {
-			fillGaps: false
-		},
 		dragSort: function () {
-			return [gridS, gridA, gridB, gridC, gridD, gridF, gridBank]
+			return [gridS, gridA, gridB, gridC, gridD, gridF, gridU, gridBank]
 		}
 	}).on('dragInit', function (item, event) {
 		dragging = true;
@@ -47,6 +47,7 @@ window.addEventListener('load', function () {
 	gridC.refreshItems().layout();
 	gridD.refreshItems().layout();
 	gridF.refreshItems().layout();
+	gridU.refreshItems().layout();
 	gridBank.refreshItems().layout();
 });
 
@@ -57,6 +58,7 @@ function saveGridState() {
 	const gridCState = gridC.getItems().map(item => item.getElement().getAttribute('data-id'));
 	const gridDState = gridD.getItems().map(item => item.getElement().getAttribute('data-id'));
 	const gridFState = gridF.getItems().map(item => item.getElement().getAttribute('data-id'));
+	const gridUState = gridU.getItems().map(item => item.getElement().getAttribute('data-id'));
 	const gridBankState = gridBank.getItems().map(item => item.getElement().getAttribute('data-id'));
 
 	localStorage.setItem(type + 'gridSState', JSON.stringify(gridSState));
@@ -65,6 +67,7 @@ function saveGridState() {
 	localStorage.setItem(type + 'gridCState', JSON.stringify(gridCState));
 	localStorage.setItem(type + 'gridDState', JSON.stringify(gridDState));
 	localStorage.setItem(type + 'gridFState', JSON.stringify(gridFState));
+	localStorage.setItem(type + 'gridUState', JSON.stringify(gridUState));
 	localStorage.setItem(type + 'gridBankState', JSON.stringify(gridBankState));
 }
 
@@ -75,9 +78,10 @@ function loadGridState() {
 	const gridCState = JSON.parse(localStorage.getItem(type + 'gridCState'));
 	const gridDState = JSON.parse(localStorage.getItem(type + 'gridDState'));
 	const gridFState = JSON.parse(localStorage.getItem(type + 'gridFState'));
+	const gridUState = JSON.parse(localStorage.getItem(type + 'gridUState'));
 	const gridBankState = JSON.parse(localStorage.getItem(type + 'gridBankState'));
 
-	if (gridSState && gridAState && gridBState && gridCState && gridDState && gridFState && gridBankState) {
+	if (gridSState && gridAState && gridBState && gridCState && gridDState && gridFState && gridUState && gridBankState) {
 		gridSState.forEach(id => {
 			const element = document.querySelector(`[data-id="${id}"]`);
 			gridBank.send(element, gridS, -1);
@@ -102,6 +106,10 @@ function loadGridState() {
 			const element = document.querySelector(`[data-id="${id}"]`);
 			gridBank.send(element, gridF, -1);
 		});
+		gridUState.forEach(id => {
+			const element = document.querySelector(`[data-id="${id}"]`);
+			gridBank.send(element, gridU, -1);
+		});
 	}
 }
 
@@ -112,6 +120,7 @@ function clearCache() {
 	localStorage.removeItem(type + 'gridCState');
 	localStorage.removeItem(type + 'gridDState');
 	localStorage.removeItem(type + 'gridFState');
+	localStorage.removeItem(type + 'gridUState');
 	localStorage.removeItem(type + 'gridBankState');
 	location.reload()
 }
@@ -120,10 +129,26 @@ document.querySelectorAll('.board-item').forEach(element => {
 	element.addEventListener('mouseenter', (event) => {
 		if (!dragging) {
 			timer = setTimeout(() => {
-				var pos = getOffset(event.target);
-				var rec = event.target.querySelector('img').getBoundingClientRect();
-				var newPosY = (pos.y - ((rec.bottom - rec.top) * 3.5) + 5);
-				var newPosX = (pos.x - (((rec.right - rec.left) * 3.5) / 2)) + ((rec.right - rec.left) / 2);
+				var customImage = event.target.querySelector('img:nth-child(2)');
+				var newPosX;
+				var newPosY;
+				var imageSource;
+				if (customImage == null) {
+					var pos = getOffset(event.target);
+					var rec = event.target.querySelector('img').getBoundingClientRect();
+					newPosY = (pos.y - ((rec.bottom - rec.top) * 3.5) + 5);
+					newPosX = (pos.x - (((rec.right - rec.left) * 3.5) / 2)) + ((rec.right - rec.left) / 2);
+					imageSource = event.target.querySelector('img').src;
+				} else {
+					imageSource = customImage.src;
+					const img = new Image();
+					img.src = imageSource;
+					var pos = getOffset(event.target);
+					// Is this working correctly?
+					newPosY = (pos.y - img.height - 50);
+					newPosX = (pos.x - (img.width / 2)) + 40;
+					document.querySelector('.preview-container p').innerHTML = imageSource.replace(/^.*[\\\/]/, '').replace(/\..+/, '').replaceAll(/_/g, ' ');
+				}
 				if (newPosY < 8) {
 					newPosY = event.target.getBoundingClientRect().bottom + 10;
 				}
@@ -132,13 +157,13 @@ document.querySelectorAll('.board-item').forEach(element => {
 				}
 				document.querySelector('.preview-container').style.top = newPosY + 'px';
 				document.querySelector('.preview-container').style.left = newPosX + 'px';
-				document.querySelector('.preview-container img').src = event.target.querySelector('img').src;
+				document.querySelector('.preview-container img').src = imageSource;
 				// Check for overflow to the right of the screen and fix if able
 				if (document.querySelector('.preview-container img').getBoundingClientRect().right > window.innerWidth - 25) {
 					document.querySelector('.preview-container').style.left = newPosX - (document.querySelector('.preview-container img').getBoundingClientRect().right - window.innerWidth) - 25 + 'px';
 				}
 				document.querySelector('.preview-container').style.visibility = 'visible';
-			}, 2000);
+			}, 700);
 		}
 	});
 	element.addEventListener('mouseleave', (event) => {
