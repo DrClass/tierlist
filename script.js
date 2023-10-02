@@ -15,7 +15,7 @@ var gridF = initGrid(".rank-f .board-column-content");
 var gridU = initGrid(".rank-u .board-column-content");
 var gridBank = initGrid(".bank .board-column-content");
 
-document.querySelector('#scriptVersion').innerHTML = "Script version: 1.3.0";
+document.querySelector('#scriptVersion').innerHTML = "Script version: 1.3.1";
 
 function initGrid(gridId) {
 	var grid = new Muuri(gridId, {
@@ -136,8 +136,8 @@ document.querySelectorAll('.board-item').forEach(element => {
 				if (customImage == null) {
 					var pos = getOffset(event.target);
 					var rec = event.target.querySelector('img').getBoundingClientRect();
-					newPosY = (pos.y - ((rec.bottom - rec.top) * 3.5) + 5);
-					newPosX = (pos.x - (((rec.right - rec.left) * 3.5) / 2)) + ((rec.right - rec.left) / 2);
+					newPosY = (pos.y - ((rec.bottom - rec.top) * 4.5) + 5);
+					newPosX = (pos.x - (((rec.right - rec.left) * 4.5) / 2)) + ((rec.right - rec.left) / 2);
 					imageSource = event.target.querySelector('img').src;
 				} else {
 					imageSource = customImage.src;

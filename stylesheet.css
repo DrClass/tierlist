@@ -145,8 +145,8 @@ h1 {
 }
 
 .preview-container img {
-	max-height: 315px;
-	max-width: 455px;
+	max-height: 405px;
+	max-width: 585px;
 	padding: 8px;
 	background-color: #fff;
 	border: 3px solid #000;
