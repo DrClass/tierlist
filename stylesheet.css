@@ -8,6 +8,12 @@ h1 {
 	padding: 25px;
 }
 
+h6 {
+	text-align: center;
+	padding: 25px;
+	margin-top: -70px;
+}
+
 #debugButton {
 	background: none;
 	border: none;
