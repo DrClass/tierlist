@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Helldivers 2 Stratagems Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<style>
+			.board-item {
+				background: #aaa;
+			}
+			.board-item-content img {
+				background: #aaa;
+				width: 90px;
+			}
+			.preview-container img {
+				background: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="helldivers">Raven's Helldivers 2 Stratagems Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Guard Dog Rover.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Guard Dog.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Supply Pack.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Shield Generator Pack.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Ballistic Shield Backpack.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Jump Pack.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Autocannon.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Expendable Anti-tank.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Flamethrower.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Laser Cannon.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Stalwart.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Machine Gun.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Arc Thrower.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Grenade Launcher.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Anti-Materiel Rifle.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Railgun.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Recoilless Rifle.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/helldivers/SPEAR Launcher.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Mortar Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/helldivers/EMS Mortar Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Machine Gun Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Gatling Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Autocannon Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Rocket Sentry.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="23">
+					<div class="board-item-content">
+						<img src="./images/helldivers/HMG Emplacement.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="24">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Tesla Tower.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="25">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Anti-Personnel Minefield.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="26">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Incendiary Mines.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="27">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Shield Generator Relay.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="28">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Precision Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="33">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Airburst Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="34">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Railcannon Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="35">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Gas Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="36">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital EMS Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="37">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Smoke Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="29">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Gatling Barrage.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Walking Barrage.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="31">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital 120MM HE Barrage.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="32">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital 380MM HE Barrage.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="38">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Orbital Laser.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="39">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle Strafing Run.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="40">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle Airstrike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="41">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle Cluster Bomb.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="42">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle Napalm Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="43">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle Smoke Strike.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="44">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle 110MM Rocket Pods.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="45">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Eagle 500kg Bomb.svg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="46">
+					<div class="board-item-content">
+						<img src="./images/helldivers/Resupply.svg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./script.js?id=2"></script>
+</html>

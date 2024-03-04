@@ -15,7 +15,7 @@ var gridF = initGrid(".rank-f .board-column-content");
 var gridU = initGrid(".rank-u .board-column-content");
 var gridBank = initGrid(".bank .board-column-content");
 
-document.querySelector('#scriptVersion').innerHTML = "Script version: 1.3.2";
+document.querySelector('#scriptVersion').innerHTML = "Script version: 1.3.3";
 
 function initGrid(gridId) {
 	var grid = new Muuri(gridId, {
@@ -149,6 +149,12 @@ document.querySelectorAll('.board-item').forEach(element => {
 					newPosY = (pos.y - img.height - 50);
 					newPosX = (pos.x - (img.width / 2)) + 40;
 					document.querySelector('.preview-container p').innerHTML = imageSource.replace(/^.*[\\\/]/, '').replace(/\..+/, '').replaceAll(/_/g, ' ');
+				}
+				// Stupid hack to get helldivers list working
+				if (imageSource.endsWith(".svg")) {
+					document.querySelector('.preview-container').style.height = '380px';
+					document.querySelector('.preview-container').style.width = '380px';
+					document.querySelector('.preview-container p').innerHTML = imageSource.replace(/^.*[\\\/]/, '').replace(/\..+/, '').replaceAll(/_/g, ' ').replaceAll(/%20/g, ' ');
 				}
 				if (newPosY < 8) {
 					newPosY = event.target.getBoundingClientRect().bottom + 10;
