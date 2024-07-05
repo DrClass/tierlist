@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portal Mods Tier List</title>
+		<link rel="icon" type="image/x-icon" href="./images/portal/icon.jpg">
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css?id=0" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<style>
+			.board-item {
+				background: transparent;
+			}
+			.board-item-content img {
+				background: #aaa;
+				max-width: 180px;
+			}
+			.preview-container img {
+				max-height: 215px;
+				max-width: 460px;
+			}
+			/* Quick fix */
+			.preview-container p {
+				visibility: hidden;
+			}
+		</style>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 460,
+				maxPreviewHeight : 215
+			};
+		</script>
+	</head>
+	<body>
+		<h1 id="portal">Portal Mods Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header" style="background:#00a2ff;">best of the best</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header" style="background:#80d1ff;">better than portal</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header" style="background:#eeeeee;">portal</div>
+			<div class="board-column-content">
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/portal/Portal.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header" style="background:#ffcd80;">worse than portal</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header" style="background:#ff9a00;">worst of the worst</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f" style="display:none;">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/portal/portal2.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/portal/aperturetag.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/portal/forbiddentestingtracks.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/portal/preludertx.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/portal/portalreloaded.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/portal/portalrevolution.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/portal/portalstoriesmel.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/portal/rexaura.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/portal/thinkingwithtimemachine.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/portal/ireland.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/portal/cwth.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/portal/dilapidation.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/portal/gammaenergy.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/portal/flash.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/portal/afterhours.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/portal/epicedition.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/portal/stillalive.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/portal/unity.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/portal/wakeup.jpg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/portal/wibidata.jpg" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./scriptv2.js?id=0"></script>
+</html>
