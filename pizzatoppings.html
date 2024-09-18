@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pizza Toppings Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css?id=0" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 215,
+				maxPreviewHeight : 215
+			};
+		</script>
+	</head>
+	<body>
+		<h1 id="pizzatops">Pizza Toppings Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="100">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Asiago.jpg" title="Extra Cheese - Asiago" />
+					</div>
+				</div>
+				<div class="board-item" data-id="101">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Cheddar.jpg" title="Extra Cheese - Cheddar" />
+					</div>
+				</div>
+				<div class="board-item" data-id="102">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Feta.jpg" title="Extra Cheese - Feta" />
+					</div>
+				</div>
+				<div class="board-item" data-id="103">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Blue.jpg" title="Extra Cheese - Blue" />
+					</div>
+				</div>
+				<div class="board-item" data-id="104">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Extra Cheese.jpg" title="Extra Cheese - Mozzarella" />
+					</div>
+				</div>
+				<div class="board-item" data-id="105">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Parmesan.jpg" title="Extra Cheese - Parmesan" />
+					</div>
+				</div>
+				<div class="board-item" data-id="106">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Cheese Ricotta.jpg" title="Extra Cheese - Ricotta" />
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Anchovies.jpg" title="Anchovies" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Bacon.jpg" title="Bacon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Canadian Bacon.jpg" title="Canadian Bacon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Ham.jpg" title="Ham" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Grilled Chicken.jpg" title="Grilled Chicken" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Ground Beef.jpg" title="Ground Beef" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Italian Sausage.jpg" title="Italian Sausage" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Chorizo.jpg" title="Chorizo" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Pepperoni.jpg" title="Pepperoni" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Salami.jpg" title="Salami" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Fried Egg.jpg" title="Fried Egg" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Shrimp.jpg" title="Shrimp" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Artichoke.jpg" title="Artichoke" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Arugula.jpg" title="Arugula" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Chopped Basil.jpg" title="Chopped Basil" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Oregano.jpg" title="Oregano" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Rosemary.jpg" title="Rosemary" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Black Olives.jpg" title="Black Olives" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Broccoli.jpg" title="Broccoli - Roasted" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Corn.jpg" title="Corn - Roasted" />
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Chopped Garlic.jpg" title="Garlic - Chopped" />
+					</div>
+				</div>
+				<div class="board-item" data-id="23">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Roasted Garlic.jpg" title="Garlic - Roasted" />
+					</div>
+				</div>
+				<div class="board-item" data-id="24">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Red Onion.jpg" title="Onion Slices" />
+					</div>
+				</div>
+				<div class="board-item" data-id="25">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Caramelized Onion.jpg" title="Caramelized Onion" />
+					</div>
+				</div>
+				<div class="board-item" data-id="26">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Spinach.jpg" title="Spinach" />
+					</div>
+				</div>
+				<div class="board-item" data-id="27">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Diced Tomatoes.jpg" title="Diced Tomatoes" />
+					</div>
+				</div>
+				<div class="board-item" data-id="28">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Sliced Tomatoes.jpg" title="Sliced Tomatoes" />
+					</div>
+				</div>
+				<div class="board-item" data-id="29">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Peas.jpg" title="Peas" />
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Bell Peppers.jpg" title="Bell Peppers" />
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Roasted Peppers.jpg" title="Roasted Peppers" />
+					</div>
+				</div>
+				<div class="board-item" data-id="31">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Jalapeno.jpg" title="Jalapeno" />
+					</div>
+				</div>
+				<div class="board-item" data-id="32">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Banana Peppers.jpg" title="Banana Peppers" />
+					</div>
+				</div>
+				<div class="board-item" data-id="33">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Mushrooms.jpg" title="Mushrooms" />
+					</div>
+				</div>
+				<div class="board-item" data-id="34">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Pineapple.jpg" title="Pineapple" />
+					</div>
+				</div>
+				<div class="board-item" data-id="35">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Apple.jpg" title="Apple" />
+					</div>
+				</div>
+				<div class="board-item" data-id="36">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Banana.jpg" title="Banana" />
+					</div>
+				</div>
+				<div class="board-item" data-id="37">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Mango.jpg" title="Mango" />
+					</div>
+				</div>
+				<div class="board-item" data-id="38">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Hot Honey.jpg" title="Hot Honey" />
+					</div>
+				</div>
+				<div class="board-item" data-id="39">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/Ranch.jpg" title="Ranch" />
+					</div>
+				</div>
+				<div class="board-item" data-id="40">
+					<div class="board-item-content">
+						<img src="./images/pizzatop/BBQ.jpg" title="BBQ Sauce" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./script.js?id=1"></script>
+</html>
