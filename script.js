@@ -156,6 +156,10 @@ document.querySelectorAll('.board-item').forEach(element => {
 					document.querySelector('.preview-container').style.width = '380px';
 					document.querySelector('.preview-container p').innerHTML = imageSource.replace(/^.*[\\\/]/, '').replace(/\..+/, '').replaceAll(/_/g, ' ').replaceAll(/%20/g, ' ');
 				}
+				var title = event.target.querySelector('img').title;
+				if (title.length >= 1) {
+					document.querySelector('.preview-container p').innerHTML = title;
+				}
 				if (newPosY < 8) {
 					newPosY = event.target.getBoundingClientRect().bottom + 10;
 				}

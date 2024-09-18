@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pizza Slice Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css?id=0" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<style>
+			/* Quick fix */
+			.preview-container p {
+				visibility: hidden;
+			}
+		</style>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 215,
+				maxPreviewHeight : 215
+			};
+		</script>
+	</head>
+	<body>
+		<h1 id="pizza">Pizza Slice Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/4slices.png" title="4 Slices" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/6slices.png" title="6 Slices" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/8slices.png" title="8 Slices" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/12slices.png" title="12 Slices" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/nocut.png" title="No Cut" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/random.png" title="Random Cuts" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/squares.png" title="Squares" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/rectangles.png" title="Rectangles" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/greedy.png" title="Greedy Cut" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/mathmaticallyperfect.png" title="Mathmatically Perfect Cut" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/foldedinhalf.png" title="Folded in Half" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/crusthater.png" title="Crust Hater" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/forkknife.png" title="Fork and Knife" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/spiral.png" title="Spiral Cut" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/pizzacut/cutouts.png" title="Cookie Cut Outs" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./script.js?id=1"></script>
+</html>
