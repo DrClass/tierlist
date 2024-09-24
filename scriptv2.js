@@ -15,7 +15,7 @@ var gridF = initGrid(".rank-f .board-column-content");
 var gridU = initGrid(".rank-u .board-column-content");
 var gridBank = initGrid(".bank .board-column-content");
 
-document.querySelector('#scriptVersion').innerHTML = "Script version: 2.0.0 ALPHA";
+document.querySelector('#scriptVersion').innerHTML = "Script version: 2.1.0";
 
 function initGrid(gridId) {
 	var grid = new Muuri(gridId, {
@@ -129,23 +129,55 @@ document.querySelectorAll('.board-item').forEach(element => {
 	element.addEventListener('mouseenter', (event) => {
 		if (!dragging) {
 			timer = setTimeout(() => {
-				var customImage = event.target.querySelector('img:nth-child(2)');
-				var newPosX;
-				var newPosY = 0;
-				var imageSource;
-				var pos = getOffset(event.target);
-				var rec = event.target.querySelector('img').getBoundingClientRect();
-				//newPosX = (pos.x - (((rec.right - rec.left) * 4.5) / 2)) + ((rec.right - rec.left) / 2);
-				newPosX = rec.x - (((Math.abs(rec.left - rec.right) * 4.5) / 2) - (Math.abs(rec.left - rec.right) / 2));
-					imageSource = event.target.querySelector('img').src;
+				let newPosX;
+				let newPosY;
+				let imageSource = event.target.querySelector('img').src;
+				let pos = getOffset(event.target);
+				let rec = event.target.querySelector('img').getBoundingClientRect();
+				let img = new Image();
+				img.src = event.target.querySelector('img').src;
+				
+				const aspectRatio = img.width / img.height;
+				let previewWidth = Settings.maxPreviewWidth;
+				let previewHeight = Settings.maxPreviewHeight;
+				if (previewWidth / previewHeight > aspectRatio) {
+					previewWidth = previewHeight * aspectRatio;
+				} else {
+					previewHeight = previewWidth / aspectRatio;
+				}
+				
+				// Scale down if the image is smaller than the max dimensions
+				if (img.width < previewWidth) {
+					previewWidth = img.width;
+					previewHeight = img.height;
+				} else if (img.height < previewHeight) {
+					previewHeight = img.height;
+					previewWidth = img.width;
+				}
+				
+				newPosX = rec.left + (rec.width / 2) - (previewWidth / 2);
+				newPosY = pos.y - previewHeight - 25;
+				
+				let title = event.target.querySelector('img').name;
+				if (title.length >= 1) {
+					document.querySelector('.preview-container p').innerHTML = title;
+					newPosY -= 15;
+				}
+				
 				if (newPosY < 8) {
 					newPosY = event.target.getBoundingClientRect().bottom + 10;
+				}
+				if (newPosY < window.scrollY) {
+					newPosY = pos.y + rec.height + 20;
 				}
 				if (newPosX < 8) {
 					newPosX = 8;
 				}
+				
 				document.querySelector('.preview-container img').src = imageSource;
-				document.querySelector('.preview-container').style.top = getOffset(event.target).y - 40 - Settings.maxPreviewHeight + 'px';
+				document.querySelector('.preview-container img').style.maxHeight = `${Settings.maxPreviewHeight}px`;
+				document.querySelector('.preview-container img').style.maxWidth = `${Settings.maxPreviewWidth}px`;
+				document.querySelector('.preview-container').style.top = newPosY + 'px';
 				document.querySelector('.preview-container').style.left = newPosX + 'px';
 
 				// Check for overflow to the right of the screen and fix if able
@@ -153,7 +185,7 @@ document.querySelectorAll('.board-item').forEach(element => {
 					document.querySelector('.preview-container').style.left = newPosX - (document.querySelector('.preview-container img').getBoundingClientRect().right - window.innerWidth) - 25 + 'px';
 				}
 				document.querySelector('.preview-container').style.visibility = 'visible';
-			}, 700);
+			}, 600);
 		}
 	});
 	element.addEventListener('mouseleave', (event) => {
