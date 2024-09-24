@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hectique's Elden Ring Subathon Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css?id=0" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 215,
+				maxPreviewHeight : 215
+			};
+		</script>
+		<style>
+			.board-item {
+				background: #aaa;
+			}
+			.board-item-content img {
+				background: #aaa;
+			}
+			.preview-container img {
+				background: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="eldensubathon">Hectique's Elden Ring Subathon Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion" style="color: #ff0000;">x</span><span style="color: #ff0000;">List version: 0.0.1 ALPHA</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/soldier-of-godrick.webp" title="Soldier of Godrick" />
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/tree-sentinel.webp" title="Tree Sentinel" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/margit.jpg" title="Margrit, the Fell Omen" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/godrick_the_grafted.jpg" title="Godrick the Grafted" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/ancestor_spirit.webp" title="Ancestor Spirit" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/commander-o'neil.jpg" title="Commander O'Neil" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/red_wolf_of_radagon.webp" title="Red Wolf of Radagon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/moongram.webp" title="Moongram, Carian Knight" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/rennala.webp" title="Rennala, Queen of the Full Moon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/dragonkin_nokstella.jpg" title="Dragonkin Soldier of Nokstella" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/black_blade_kindred.webp" title="Black Blade Kindred" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/radahn.webp" title="Starscourge Radahn" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/CC.png" title="Mimic Tear" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/regal-ancestor-spirit.webp" title="Regal Ancestor Spirit" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/valiant_gargoyle.webp" title="Valiant Gargoyles" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/fias-champion.webp" title="Fia’s Champions" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/godfrey_golden_shade.jpg" title="Godfrey (Golden Shade)" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/morgott_the_omen_king.webp" title="Morgott the Omen King" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/commander-niall.webp" title="Commander Niall" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/fire_giant.webp" title="Fire Giant" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/godskin_duo.webp" title="Godskin Duo" />
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/beast-clergyman.webp" title="Beast Clergyman" />
+					</div>
+				</div>
+				<div class="board-item" data-id="23">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/maliketh-the-black-blade.webp" title="Maliketh, the Black Blade" />
+					</div>
+				</div>
+				<div class="board-item" data-id="24">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/sir_gideon_ofnir_the_all_knowing.jpg" title="Sir Gideon Ofnir, The All-Knowing" />
+					</div>
+				</div>
+				<div class="board-item" data-id="25">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/godfrey_first_elden_lord.jpg" title="Godfrey, First Elden Lord" />
+					</div>
+				</div>
+				<div class="board-item" data-id="26">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/hoarah_loux.webp" title="Hoarah Loux" />
+					</div>
+				</div>
+				<div class="board-item" data-id="27">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/radagon_of_the_golden_order.webp" title="Radagon of the Golden Order" />
+					</div>
+				</div>
+				<div class="board-item" data-id="28">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/elden_beast.webp" title="Elden Beast" />
+					</div>
+				</div>
+				<div class="board-item" data-id="29">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/decaying_ekzykes.jpg" title="Decaying Ekzykes" />
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/borealis.webp" title="Borealis, the Freezing Fog" />
+					</div>
+				</div>
+				<div class="board-item" data-id="31">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/glintstone-dragon.avif" title="Glintstone Dragon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="32">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/flying_dragon_greyll.jpg" title="Flying Dragon Greyll" />
+					</div>
+				</div>
+				<div class="board-item" data-id="33">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/erdtree-avatar.webp" title="Erdtree Avatar" />
+					</div>
+				</div>
+				<div class="board-item" data-id="34">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/erd_tree_avatar.png" title="Erdtree Avatar Duo" />
+					</div>
+				</div>
+				<div class="board-item" data-id="35">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/putrid-avatar.jpg" title="Putrid Avatar" />
+					</div>
+				</div>
+				<div class="board-item" data-id="36">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/leonine_misbegotten.webp" title="Leonine Misbegotten" />
+					</div>
+				</div>
+				<div class="board-item" data-id="37">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/death_rite_bird.jpg" title="Death Rite Bird" />
+					</div>
+				</div>
+				<div class="board-item" data-id="38">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/magma_wyrm.jpg" title="Magma Wyrm" />
+					</div>
+				</div>
+				<div class="board-item" data-id="39">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/adan_thief_of_fire.webp" title="Adan, Thief of Fire" />
+					</div>
+				</div>
+				<div class="board-item" data-id="40">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/crystallian.webp" title="Crystalian" />
+					</div>
+				</div>
+				<div class="board-item" data-id="41">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/bloodhound-knight-darriwil.webp" title="Bloodhound Knight Darriwil" />
+					</div>
+				</div>
+				<div class="board-item" data-id="42">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/tibia-mariner.webp" title="Tibia Mariner" />
+					</div>
+				</div>
+				<div class="board-item" data-id="43">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/royal_knight_loretta.jpg" title="Royal Knight Loretta" />
+					</div>
+				</div>
+				<div class="board-item" data-id="44">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/loretta-knight-of-the-haligtree.webp" title="Loretta, Knight of the Haligtree" />
+					</div>
+				</div>
+				<div class="board-item" data-id="45">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/ancient_hero_of_zamor.jpg" title="Ancient Hero of Zamor" />
+					</div>
+				</div>
+				<div class="board-item" data-id="46">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/battlemage-hugues.webp" title="Battlemage Hugues" />
+					</div>
+				</div>
+				<div class="board-item" data-id="47">
+					<div class="board-item-content">
+						<img src="./images/eldensubathon/full-grown-fallingstar-beast.webp" title="Full-Grown Fallingstar Beast" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./script.js?id=1"></script>
+</html>
