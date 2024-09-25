@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FFXIV Job Stone Tasty Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css?id=0" />
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 600,
+				maxPreviewHeight : 338
+			};
+		</script>
+		<style>
+			.board-item {
+				background: #aaa;
+			}
+			.board-item-content img {
+				background: #aaa;
+			}
+			.preview-container img {
+				background: #aaa;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="FFXIVJS">FFXIV Job Stone Tasty Tier List</h1>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/AST.png" name="Astrologian" />
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/BLM.png" name="Black Mage" />
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/BLU.png" name="Blue Mage" />
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/BRD.png" name="Bard" />
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/DNC.png" name="Dancer" />
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/DRG.png" name="Dragoon" />
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/DRK.png" name="Dark Knight" />
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/GNB.png" name="Gunbreaker" />
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/MCH.png" name="Machinist" />
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/MNK.png" name="Monk" />
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/NIN.png" name="Ninja" />
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/PCT.png" name="Pictomancer" />
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/PLD.png" name="Paladin" />
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/RDM.png" name="Red Mage" />
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/RPR.png" name="Reaper" />
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/SAM.png" name="Samurai" />
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/SCH.png" name="Scholar" />
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/SGE.png" name="Sage" />
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/SMN.png" name="Summoner" />
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/VPR.png" name="Viper" />
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/WAR.png" name="Warrior" />
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/ffxivjs/WHM.png" name="White Mage" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="./scriptv2.js?id=2"></script>
+</html>
