@@ -66,6 +66,9 @@ h6 {
 	background: #fff;
 	max-height: 90px;
 	max-width: 164px;
+	min-height: 90%;
+	height: auto;
+	width: auto;
 	padding: 5px;
 	position: relative;
 	right: -50%;
@@ -76,6 +79,7 @@ h6 {
 	image-rendering: -moz-crisp-edges;
 	image-rendering: -o-pixelated;
 	image-rendering: pixelated;
+	image-rendering: crisp-edges;
 }
 
 .board-column {

@@ -129,6 +129,10 @@ document.querySelectorAll('.board-item').forEach(element => {
 	element.addEventListener('mouseenter', (event) => {
 		if (!dragging) {
 			timer = setTimeout(() => {
+				if (Settings.disablePreview == true) {
+					return;
+				}
+				
 				let newPosX;
 				let newPosY;
 				let imageSource = event.target.querySelector('img').src;

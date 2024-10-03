@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cookie Tier List</title>
+		<link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+		<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<script type="text/javascript">
+			var Settings = {
+				maxPreviewWidth : 300,
+				maxPreviewHeight : 300,
+				disablePreview: true
+			};
+		</script>
+		<style>
+			.board-item {
+				background: #aaa;
+			}
+			.board-item-content img {
+				background: transparent;
+				padding-top: 0px;
+				padding-left: 0px; /* Fix for the cookies having extra white space on their left side */
+				margin-top: -5px;
+			}
+			.preview-container img {
+				background: #aaa;
+			}
+			.name {
+				margin-top: -22px;
+				width: 100px;
+				height: 20px;
+				font-size: clamp(10px, 1vw, 16px);
+				position: relative;
+				text-align: center;
+				text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+				padding-top: 8px;
+				display: flex;
+				flex-direction: column-reverse;
+				font-family: 'VT323', monospace;
+				text-transform: uppercase;
+				font-weight: 500;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="cookie2">Raven's Cookie Flavor Tier List</h1>
+		<h6>While these icons are from Cookie Clicker, they may be used to represent different cookies than in Cookie Clicker!</h6>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<div class="version">
+			<span id="scriptVersion">x</span><span>List version: 1.0.0</span>
+		</div>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p class="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div class="board-column rank-s">
+			<div class="board-column-header">s</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-a">
+			<div class="board-column-header">a</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-b">
+			<div class="board-column-header">b</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-c">
+			<div class="board-column-header">c</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-d">
+			<div class="board-column-header">d</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-f">
+			<div class="board-column-header">f</div>
+			<div class="board-column-content"></div>
+		</div>
+		<div class="board-column rank-u" style="display:none;">
+			<div class="board-column-header">never <br />had</div>
+			<div class="board-column-content"></div>
+		</div>
+		<p class="spacer"></p>
+		<div class="board-column bank">
+			<div class="board-column-content">
+				<div class="board-item" data-id="1">
+					<div class="board-item-content">
+						<img src="./images/cookie/chocolatechip.png" />
+						<p class="name">Chocolate Chip</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="2">
+					<div class="board-item-content">
+						<img src="./images/cookie/doublechip.png" />
+						<p class="name">Double Chocolate Chip</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="3">
+					<div class="board-item-content">
+						<img src="./images/cookie/bigchip.png" />
+						<p class="name">Chocolate Chunks</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="4">
+					<div class="board-item-content">
+						<img src="./images/cookie/whitechocolate.png" />
+						<p class="name">White Chocolate Chip</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="5">
+					<div class="board-item-content">
+						<img src="./images/cookie/whitechocolatemacadamianut.png" />
+						<p class="name">White Chocolate Macadamia Nut</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="6">
+					<div class="board-item-content">
+						<img src="./images/cookie/candy.png" />
+						<p class="name">Candy Pieces</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="7">
+					<div class="board-item-content">
+						<img src="./images/cookie/doublechocolate.png" />
+						<p class="name">Double Chocolate</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="8">
+					<div class="board-item-content">
+						<img src="./images/cookie/frosted.png" />
+						<p class="name">Frosted</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="9">
+					<div class="board-item-content">
+						<img src="./images/cookie/plain.png" />
+						<p class="name">Plain</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="10">
+					<div class="board-item-content">
+						<img src="./images/cookie/sugar.png" />
+						<p class="name">Sugar</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="11">
+					<div class="board-item-content">
+						<img src="./images/cookie/butter.png" />
+						<p class="name">Butter</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="12">
+					<div class="board-item-content">
+						<img src="./images/cookie/shortbread.png" />
+						<p class="name">Shortbread</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="13">
+					<div class="board-item-content">
+						<img src="./images/cookie/oatmealraisin.png" />
+						<p class="name">Oatmeal Raisin</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="14">
+					<div class="board-item-content">
+						<img src="./images/cookie/granola.png" />
+						<p class="name">Granola</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="15">
+					<div class="board-item-content">
+						<img src="./images/cookie/peanutbutter.png" />
+						<p class="name">Peanut Butter</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="16">
+					<div class="board-item-content">
+						<img src="./images/cookie/peanutbutterkiss.png" />
+						<p class="name">Peanut Butter Kiss</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="17">
+					<div class="board-item-content">
+						<img src="./images/cookie/coconut.png" />
+						<p class="name">Coconut</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="18">
+					<div class="board-item-content">
+						<img src="./images/cookie/Maple.png" />
+						<p class="name">Maple</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="19">
+					<div class="board-item-content">
+						<img src="./images/cookie/butterscotch.png" />
+						<p class="name">Butterscotch</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="20">
+					<div class="board-item-content">
+						<img src="./images/cookie/almond.png" />
+						<p class="name">Almond</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="21">
+					<div class="board-item-content">
+						<img src="./images/cookie/hazelnut.png" />
+						<p class="name">Hazelnut</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="22">
+					<div class="board-item-content">
+						<img src="./images/cookie/walnut.png" />
+						<p class="name">Walnut</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="23">
+					<div class="board-item-content">
+						<img src="./images/cookie/cashew.png" />
+						<p class="name">Cashew</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="24">
+					<div class="board-item-content">
+						<img src="./images/cookie/snickerdoodle.png" />
+						<p class="name">Snickerdoodle</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="25">
+					<div class="board-item-content">
+						<img src="./images/cookie/gingerbread.png" />
+						<p class="name">Gingerbread</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="26">
+					<div class="board-item-content">
+						<img src="./images/cookie/gingersnap.png" />
+						<p class="name">Gingersnap</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="27">
+					<div class="board-item-content">
+						<img src="./images/cookie/cinnamon.png" />
+						<p class="name">Cinnamon</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="28">
+					<div class="board-item-content">
+						<img src="./images/cookie/sandie.png" />
+						<p class="name">Sandies (Sablés)</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="29">
+					<div class="board-item-content">
+						<img src="./images/cookie/pecansandie.png" />
+						<p class="name">Pecan Sandies (Sablés)</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="30">
+					<div class="board-item-content">
+						<img src="./images/cookie/teabiscuit.png" />
+						<p class="name">Tea Biscuit</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="31">
+					<div class="board-item-content">
+						<img src="./images/cookie/thumbprint.png" />
+						<p class="name">Thumbprint</p>
+					</div>
+				</div>
+				<div class="board-item" data-id="32">
+					<div class="board-item-content">
+						<img src="./images/cookie/blackwhite.png" />
+						<p class="name">Black and White</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</body>
+	<script src="./scriptv2.js"></script>
+</html>
