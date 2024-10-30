@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./stylesheetv2.css"/>
+		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
+		<script src="./scriptv3.js"></script>
+	</head>
+	<body>
+		<h1 class="title"></h1>
+		<h6 class="title"></h6>
+		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
+		<button id="shareButton">Share Ranking</button>
+		<div class="preview-container">
+			<img src="./images/placeholder.jpg" />
+			<p id="preview-text"></p>
+		</div>
+		<div class="drag-container"></div>
+		<div id="ranks"></div>
+		<p class="spacer"></p>
+		<div class="board-column bank" style="visibility:hidden;">
+			<div class="board-column-content" id="itemBank"></div>
+		</div>
+		<div id="popupModal" class="modal">
+			<div class="modal-content">
+				<span class="close-btn" id="closePopup">&times;</span>
+				<p>Copy the link below:</p>
+				<div>
+					<span class="link" id="currentUrl"></span>
+					<div id="copyMessage">Copied to clipboard.</div>
+					<button class="button" id="copyBtn">Copy</button>
+				</div>
+			</div>
+		</div>
+		<div id="blockingModal" class="modal" style="background-color:transparent;">
+			<div class="readOnlyBanner">
+				<span>READ ONLY MODE</span>
+			</div>
+			<div class="modal-content" id="editModal" style="display:none;">
+				<span class="close-btn" id="closeReadOnlyPopup">&times;</span>
+				<p>Editing this list will override your locally saved version. Are you sure you want to edit this list?</p>
+				<div>
+					<button class="button" id="confirmBtn">Yes</button>
+					<button class="button" id="denyBtn">No</button>
+				</div>
+			</div>
+		</div>
+		<div class="version"><span></span></div>
+	</body>
+</html>

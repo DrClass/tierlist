@@ -1,0 +1,62 @@
+{
+	"formatVersion": "1.0.0",
+	"listVersion": "1",
+	"listId": "soda",
+	"imagesRoot": "images/soda/",
+	"previewImageMaxHeight": 300,
+	"previewImageMaxWidth": 300,
+	"previewImageMinHeight": -1,
+	"previewImageMinWidth": -1,
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableImageText": true,
+	"title": "Soda Tier List",
+	"subtitle": "",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#FF7F7F"
+		},
+		{
+			"text": "A",
+			"color": "#FFBE7F"
+		},
+		{
+			"text": "B",
+			"color": "#FFDF7F"
+		},
+		{
+			"text": "C",
+			"color": "#FFFF7F"
+		},
+		{
+			"text": "D",
+			"color": "#BEFE7E"
+		},
+		{
+			"text": "F",
+			"color": "#7FFE7F"
+		},
+		{
+			"text": "Never Had",
+			"color": "#CEAEFA",
+			"style": "font-size: 80%;"
+		}
+	],
+	"optionTemplate": {
+		"id": "1",
+		"imagePath": "coke.jpg",
+		"imageText": "",
+		"previewImagePath": ""
+	},
+	"options": [
+		{
+			"id": 1,
+			"imagePath": "coke.jpg"
+		},
+		{
+			"id": 2,
+			"imagePath": "pepsi.jpg"
+		}
+	]
+}

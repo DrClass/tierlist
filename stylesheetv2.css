@@ -1,0 +1,254 @@
+body {
+	background: #777;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	padding: 25px;
+}
+
+h6 {
+	text-align: center;
+	padding: 25px;
+	margin-top: -70px;
+}
+
+#debugButton {
+	background: none;
+	border: none;
+	color: #00000000;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+#debugButton:hover {
+	background: #fff;
+	color: #ff0000ff;
+}
+
+#shareButton {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.version {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: #444;
+	font-size: 10px;
+}
+
+.grid {
+	position: relative;
+}
+
+.board-item {
+	background: #fff;
+	cursor: pointer;
+	display: block;
+	height: 100px;
+	margin: 5px;
+	margin-right: 0px;
+	min-width: 80px;
+	position: absolute;
+	z-index: 1;
+}
+
+.board-item.muuri-item-dragging {
+	z-index: 3;
+}
+
+.board-item.muuri-item-releasing {
+	z-index: 2;
+}
+
+.board-item.muuri-item-hidden {
+	z-index: 0;
+}
+
+.board-item-content {
+	position: relative;
+	height: 100px;
+	min-width: 70px;
+}
+
+.board-item-content img {
+	background: #fff;
+	max-height: 90px;
+	max-width: 164px;
+	min-height: 90%;
+	height: auto;
+	width: auto;
+	padding: 5px;
+	position: relative;
+	right: -50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	-ms-interpolation-mode: nearest-neighbor;
+	image-rendering: -webkit-optimize-contrast;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: -o-pixelated;
+	image-rendering: pixelated;
+	image-rendering: crisp-edges;
+}
+
+.board-column {
+	background: #444;
+	margin-bottom: 5px;
+	margin-left: 95px;
+	padding-right: 5px;
+	transform: translateX(0px) translateY(0px) !important;
+}
+
+.board-column-header {
+	align-items: center;
+	background: #333;
+	color: #000;
+	display: flex;
+	font-weight: bold;
+	height: 100%;
+	justify-content: center;
+	left: -95px;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	width: 95px;
+}
+
+.bank {
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.board-column-content {
+	min-height: 110px;
+}
+
+.spacer {
+	height: 10px;
+}
+
+.preview-container {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	z-index: 100;
+	visibility: hidden;
+}
+
+.preview-container img {
+	max-height: 405px;
+	max-width: 585px;
+	background-color: #aaa;
+	border: 3px solid #000;
+}
+
+.preview-container p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-align: center;
+	font-size: 20px;
+	margin-top: -3px;
+	text-transform: uppercase;
+	background: #eee;
+	border: 3px solid #000;
+	border-top-width: 0px;
+	padding: 0px;
+	margin-bottom: 0px;
+	display: none;
+}
+
+.preview-image {
+	visibility: hidden;
+	display: none;
+	position: absolute;
+	width: 0px;
+	padding: 0px !important;
+}
+
+
+
+.modal {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+	background-color: white;
+	padding: 20px;
+	text-align: center;
+	width: 300px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	position: relative;
+}
+
+.button {
+	margin-top: 10px;
+	padding: 10px 15px;
+	background-color: #007bff;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover {
+	background-color: #0056b3;
+}
+
+.close-btn {
+	color: #aaa;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.close-btn:hover {
+	color: black;
+}
+
+.link {
+	display: inline-block;
+	padding: 5px;
+	background-color: #f1f1f1;
+	border: 1px solid #ccc;
+	user-select: text;
+}
+
+#copyMessage {
+	display: none;
+	color: black;
+	background-color: #bbb;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	padding: 5px;
+	font-size: 14px;
+	margin-bottom: 10px;
+	opacity: 0;
+	transition: opacity 0.5s ease; /* Fading effect */
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+}
+
+.readOnlyBanner {
+	background-color: #EE2E35;
+	position: absolute;
+	padding: 5px;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}

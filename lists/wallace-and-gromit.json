@@ -1,0 +1,84 @@
+{
+	"formatVersion": "1.0.0",
+	"listVersion": "1",
+	"listId": "wallaceandgromit",
+	"imagesRoot": "images/wallaceandgromit/",
+	"previewImageMaxHeight": 400,
+	"previewImageMaxWidth": 300,
+	"previewImageMinHeight": -1,
+	"previewImageMinWidth": -1,
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableImageText": true,
+	"disableItemBackground": true,
+	"title": "Wallace & Gromit Movie Tier List",
+	"subtitle": "",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#FF7F7F"
+		},
+		{
+			"text": "A",
+			"color": "#FFBE7F"
+		},
+		{
+			"text": "B",
+			"color": "#FFDF7F"
+		},
+		{
+			"text": "C",
+			"color": "#FFFF7F"
+		},
+		{
+			"text": "D",
+			"color": "#BEFE7E"
+		},
+		{
+			"text": "F",
+			"color": "#7FFE7F"
+		}
+	],
+	"options": [
+		{
+			"id": 1,
+			"imagePath": "AGrandDayOut.jpg"
+		},
+		{
+			"id": 2,
+			"imagePath": "TheWrongTrousers.jpg"
+		},
+		{
+			"id": 3,
+			"imagePath": "ACloseShave.jpg"
+		},
+		{
+			"id": 4,
+			"imagePath": "AMatterOfLoafAndDeath.jpg"
+		},
+		{
+			"id": 5,
+			"imagePath": "TheCurseOfTheWereRabbit.jpg"
+		},
+		{
+			"id": 6,
+			"imagePath": "VengeanceMostFowl.jpg"
+		},
+		{
+			"id": 7,
+			"imagePath": "ShaunTheSheepTheFarmersLlamas.jpg"
+		},
+		{
+			"id": 8,
+			"imagePath": "ShaunTheSheepTheFlightBeforeChristmas.jpg"
+		},
+		{
+			"id": 9,
+			"imagePath": "ShaunTheSheepMovie.jpg"
+		},
+		{
+			"id": 10,
+			"imagePath": "ShaunTheSheepMovieFarmageddon.jpg"
+		}
+	]
+}
