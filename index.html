@@ -3,7 +3,12 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="./stylesheetv2.css"/>
 		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
-		<script src="./scriptv3.js"></script>
+		<script>
+			var script = document.createElement('script');
+			script.src = './scriptv3.js?t=' + new Date().getTime();
+			document.head.appendChild(script);
+		</script>
+		<!-- <script src="./scriptv3.js"></script> -->
 	</head>
 	<body>
 		<h1 class="title"></h1>

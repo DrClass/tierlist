@@ -48,6 +48,15 @@ window.onload = function() {
 				modal.style.display = 'none';
 			}
 		}
+		// For some reason long lists may render wong, this shortcut should fix it
+		document.addEventListener('keydown', function(event) {
+			if (event.altKey && event.key.toLowerCase() === 's') {
+				for (const grid of grids) {
+					grid.refreshItems().layout();
+				}
+				event.preventDefault();
+			}
+		});
 	} else {
 		console.log('No list parameter specified!')
 	}
@@ -346,8 +355,9 @@ function handleHoverOverPreview(event) {
 			}
 			
 			let rec = event.target.getBoundingClientRect();
+			let scrollOffset = window.pageYOffset || document.documentElement.scrollTop;
 			let x = (rec.left + (rec.width / 2)) - (width / 2);
-			let y = rec.top - height - 16; // subtract 16 to give us space and account for borders
+			let y = rec.top - height - 16 + scrollOffset; // subtract 16 to give us space and account for borders
 			
 			if (listData.enablePreviewText) {
 				let text;
@@ -368,8 +378,16 @@ function handleHoverOverPreview(event) {
 			if (document.documentElement.clientWidth - x - width < 8) {
 				x = document.documentElement.clientWidth - width - 14;
 			}
-			if (y < 8) {
+			
+			let viewHeight = window.innerHeight;
+			let oldY = y;
+			
+			if (y < 8 + scrollOffset) {
 				y = rec.bottom + window.scrollY + 10;
+			}
+			// If the image would be cut off on the top AND bottom, prefer to cut off on the top of the screen
+			if (y + height + 16 > viewHeight + scrollOffset) {
+				y = oldY;
 			}
 			
 			document.querySelector('.preview-container img').src = img.src;

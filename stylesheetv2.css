@@ -141,8 +141,8 @@ h6 {
 }
 
 .preview-container img {
-	max-height: 405px;
-	max-width: 585px;
+	max-height: 600px;
+	max-width: 600px;
 	background-color: #aaa;
 	border: 3px solid #000;
 }
