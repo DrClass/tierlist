@@ -8,8 +8,8 @@
 	"previewImageMinHeight": -1,
 	"previewImageMinWidth": -1,
 	"enablePreview": true,
-	"enablePreviewText": false,
-	"enableImageText": true,
+	"enablePreviewText": true,
+	"enableImageText": false,
 	"title": "Soda Tier List",
 	"subtitle": "",
 	"ranks": [
@@ -52,11 +52,323 @@
 	"options": [
 		{
 			"id": 1,
-			"imagePath": "coke.jpg"
+			"imagePath": "coke.jpg",
+			"imageText": "Coca-Cola"
 		},
 		{
 			"id": 2,
-			"imagePath": "pepsi.jpg"
+			"imagePath": "coke cherry.jpg",
+			"imageText": "Coca-Cola Cherry"
+		},
+		{
+			"id": 3,
+			"imagePath": "coke vanilla.jpg",
+			"imageText": "Coca-Cola Vanilla"
+		},
+		{
+			"id": 4,
+			"imagePath": "coke cherry vanilla.jpg",
+			"imageText": "Coca-Cola Cherry Vanilla"
+		},
+		{
+			"id": 5,
+			"imagePath": "pepsi.jpg",
+			"imageText": "Pepsi"
+		},
+		{
+			"id": 6,
+			"imagePath": "pepsi sugar.jpg",
+			"imageText": "Pepsi - Real Sugar"
+		},
+		{
+			"id": 7,
+			"imagePath": "pepsi cherry.jpg",
+			"imageText": "Pepsi Cherry"
+		},
+		{
+			"id": 8,
+			"imagePath": "pepsi vanilla.jpg",
+			"imageText": "Pepsi Vanilla"
+		},
+		{
+			"id": 9,
+			"imagePath": "pepsi mango.jpg",
+			"imageText": "Pepsi Mango"
+		},
+		{
+			"id": 10,
+			"imagePath": "rccola.jpg",
+			"imageText": "RC Cola"
+		},
+		{
+			"id": 11,
+			"imagePath": "moxie.jpg",
+			"imageText": "Moxie"
+		},
+		{
+			"id": 12,
+			"imagePath": "aw.jpg",
+			"imageText": "A&W Root Beer"
+		},
+		{
+			"id": 13,
+			"imagePath": "aw cream.jpg",
+			"imageText": "A&W Cream Soda"
+		},
+		{
+			"id": 14,
+			"imagePath": "barqs.jpg",
+			"imageText": "Barqs Root Beer"
+		},
+		{
+			"id": 15,
+			"imagePath": "barqs creme.jpg",
+			"imageText": "Barqs Creme Soda"
+		},
+		{
+			"id": 16,
+			"imagePath": "barqs creme red.jpg",
+			"imageText": "Barqs Red Creme Soda"
+		},
+		{
+			"id": 17,
+			"imagePath": "mug.jpg",
+			"imageText": "Mug Root Beer"
+		},
+		{
+			"id": 18,
+			"imagePath": "mug cream.jpg",
+			"imageText": "Mug Cream Soda"
+		},
+		{
+			"id": 19,
+			"imagePath": "bigred.jpg",
+			"imageText": "Big Red"
+		},
+		{
+			"id": 21,
+			"imagePath": "sprite.jpg",
+			"imageText": "Sprite"
+		},
+		{
+			"id": 22,
+			"imagePath": "sprite lymonade.jpg",
+			"imageText": "Sprite Lymonade"
+		},
+		{
+			"id": 23,
+			"imagePath": "sprite cherry.jpg",
+			"imageText": "Sprite Cherry"
+		},
+		{
+			"id": 24,
+			"imagePath": "7up.jpg",
+			"imageText": "7up"
+		},
+		{
+			"id": 25,
+			"imagePath": "7up.jpg",
+			"imageText": "7up Cherry"
+		},
+		{
+			"id": 26,
+			"imagePath": "starry.jpg",
+			"imageText": "Starry"
+		},
+		{
+			"id": 27,
+			"imagePath": "canadadry.jpg",
+			"imageText": "Canada Dry"
+		},
+		{
+			"id": 28,
+			"imagePath": "schweppes.jpg",
+			"imageText": "Schweppes"
+		},
+		{
+			"id": 29,
+			"imagePath": "drpepper.jpg",
+			"imageText": "Dr Pepper"
+		},
+		{
+			"id": 30,
+			"imagePath": "drpepper strawberry cream.jpg",
+			"imageText": "Dr Pepper Strawberries and Cream"
+		},
+		{
+			"id": 31,
+			"imagePath": "drpepper cherry.jpg",
+			"imageText": "Dr Pepper Cherry"
+		},
+		{
+			"id": 20,
+			"imagePath": "drpepper cream.jpg",
+			"imageText": "Dr Pepper & Cream Soda"
+		},
+		{
+			"id": 32,
+			"imagePath": "pibb.jpg",
+			"imageText": "Pibb Xtra"
+		},
+		{
+			"id": 33,
+			"imagePath": "dew.jpg",
+			"imageText": "Mtn Dew"
+		},
+		{
+			"id": 34,
+			"imagePath": "dew baja.jpg",
+			"imageText": "Mtn Dew Baja Blast "
+		},
+		{
+			"id": 35,
+			"imagePath": "dew livewire.jpg",
+			"imageText": "Mtn Dew Livewire"
+		},
+		{
+			"id": 36,
+			"imagePath": "dew melon.jpg",
+			"imageText": "Mtn Dew Major Melon"
+		},
+		{
+			"id": 37,
+			"imagePath": "dew red.jpg",
+			"imageText": "Mtn Dew Code Red"
+		},
+		{
+			"id": 38,
+			"imagePath": "dew spark.jpg",
+			"imageText": "Mtn Dew Spark"
+		},
+		{
+			"id": 39,
+			"imagePath": "dew voltage.jpg",
+			"imageText": "Mtn Dew Voltage"
+		},
+		{
+			"id": 40,
+			"imagePath": "melloyello.jpg",
+			"imageText": "Mello Yello"
+		},
+		{
+			"id": 41,
+			"imagePath": "fresca.jpg",
+			"imageText": "Fresca"
+		},
+		{
+			"id": 42,
+			"imagePath": "crush grape.jpg",
+			"imageText": "Crush Grape"
+		},
+		{
+			"id": 43,
+			"imagePath": "crush grapefruit.jpg",
+			"imageText": "Crush Grapefruit"
+		},
+		{
+			"id": 44,
+			"imagePath": "crush orange.jpg",
+			"imageText": "Crush Orange"
+		},
+		{
+			"id": 45,
+			"imagePath": "crush peach.jpg",
+			"imageText": "Cruch Peach"
+		},
+		{
+			"id": 46,
+			"imagePath": "crush pineapple.jpg",
+			"imageText": "Crush Pineapple"
+		},
+		{
+			"id": 47,
+			"imagePath": "crush strawberry.jpg",
+			"imageText": "Crush Strawberry"
+		},
+		{
+			"id": 48,
+			"imagePath": "fanta orange.jpg",
+			"imageText": "Fanta"
+		},
+		{
+			"id": 49,
+			"imagePath": "fanta berry.jpg",
+			"imageText": "Fanta Berry"
+		},
+		{
+			"id": 50,
+			"imagePath": "fanta grape.jpg",
+			"imageText": "Franta Grape"
+		},
+		{
+			"id": 51,
+			"imagePath": "fanta peach.jpg",
+			"imageText": "Fanta Peach"
+		},
+		{
+			"id": 52,
+			"imagePath": "fanta pineapple.jpg",
+			"imageText": "Fanta Pineapple"
+		},
+		{
+			"id": 53,
+			"imagePath": "fanta strawberry.jpg",
+			"imageText": "Fanta Strawberry"
+		},
+		{
+			"id": 54,
+			"imagePath": "sunkist orange.jpg",
+			"imageText": "Sunkist Orange"
+		},
+		{
+			"id": 55,
+			"imagePath": "sunkist berry.jpg",
+			"imageText": "Sunkist Berry"
+		},
+		{
+			"id": 56,
+			"imagePath": "sunkist cherry.jpg",
+			"imageText": "Sunkist Cherry"
+		},
+		{
+			"id": 57,
+			"imagePath": "sunkist fruitpunch.jpg",
+			"imageText": "Sunkist Fruit Punch"
+		},
+		{
+			"id": 58,
+			"imagePath": "sunkist grape.jpg",
+			"imageText": "Sunkist Grape"
+		},
+		{
+			"id": 59,
+			"imagePath": "sunkist mango.jpg",
+			"imageText": "Sunkist Mango"
+		},
+		{
+			"id": 60,
+			"imagePath": "sunkist peach.jpg",
+			"imageText": "Sunkist Peach"
+		},
+		{
+			"id": 61,
+			"imagePath": "sunkist pineapple.jpg",
+			"imageText": "Sunkist Pineapple"
+		},
+		{
+			"id": 62,
+			"imagePath": "sunkist strawberry lemonade.jpg",
+			"imageText": "Sunkist Strawberry Lemonade"
+		},
+		{
+			"id": 63,
+			"imagePath": "sunkist strawberry.jpg",
+			"imageText": "Sunkist Strawberry"
+		},
+		{
+			"id": 64,
+			"imagePath": "orangina.jpg",
+			"imageText": "Orangina"
 		}
 	]
 }
