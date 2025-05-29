@@ -1,0 +1,157 @@
+{
+	"formatVersion": "1.0.0",
+	"listVersion": "1",
+	"listId": "water",
+	"imagesRoot": "images/water/",
+	"previewImageMaxHeight": 400,
+	"previewImageMaxWidth": 300,
+	"previewImageMinHeight": -1,
+	"previewImageMinWidth": -1,
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableImageText": false,
+	"title": "Water Tier List",
+	"subtitle": "If your favorite is not on here then you need to do something better than life than worry that your favorite water is missing from a tier list.",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#FF7F7F"
+		},
+		{
+			"text": "A",
+			"color": "#FFBE7F"
+		},
+		{
+			"text": "B",
+			"color": "#FFDF7F"
+		},
+		{
+			"text": "C",
+			"color": "#FFFF7F"
+		},
+		{
+			"text": "D",
+			"color": "#BEFE7E"
+		},
+		{
+			"text": "F",
+			"color": "#7FFE7F"
+		}
+	],
+	"optionTemplate": {
+		"id": "1",
+		"imagePath": "coke.jpg",
+		"imageText": "",
+		"previewImagePath": ""
+	},
+	"options": [
+		{
+			"id": 1,
+			"imagePath": "aquafina.jpg"
+		},
+		{
+			"id": 2,
+			"imagePath": "boxed.jpg"
+		},
+		{
+			"id": 3,
+			"imagePath": "core.jpg"
+		},
+		{
+			"id": 4,
+			"imagePath": "crystalgeyser.jpg"
+		},
+		{
+			"id": 5,
+			"imagePath": "dasani.jpg"
+		},
+		{
+			"id": 6,
+			"imagePath": "deerpark.jpg"
+		},
+		{
+			"id": 7,
+			"imagePath": "dehydrated.jpg"
+		},
+		{
+			"id": 8,
+			"imagePath": "essentia.jpg"
+		},
+		{
+			"id": 9,
+			"imagePath": "evian.jpg"
+		},
+		{
+			"id": 10,
+			"imagePath": "fiji.jpg"
+		},
+		{
+			"id": 11,
+			"imagePath": "icemountain.jpg"
+		},
+		{
+			"id": 12,
+			"imagePath": "just.jpg"
+		},
+		{
+			"id": 13,
+			"imagePath": "lifewtr.jpg"
+		},
+		{
+			"id": 14,
+			"imagePath": "liquiddeath.jpg"
+		},
+		{
+			"id": 15,
+			"imagePath": "panna.jpg"
+		},
+		{
+			"id": 16,
+			"imagePath": "penta.jpg"
+		},
+		{
+			"id": 17,
+			"imagePath": "perrier.jpg"
+		},
+		{
+			"id": 18,
+			"imagePath": "polandspring.jpg"
+		},
+		{
+			"id": 19,
+			"imagePath": "polar.jpg"
+		},
+		{
+			"id": 20,
+			"imagePath": "purelife.jpg"
+		},
+		{
+			"id": 21,
+			"imagePath": "rain.jpg"
+		},
+		{
+			"id": 22,
+			"imagePath": "smart.jpg"
+		},
+		{
+			"id": 23,
+			"imagePath": "spellegrino.jpg"
+		},
+		{
+			"id": 24,
+			"imagePath": "still.jpg"
+		},
+		{
+			"id": 25,
+			"imagePath": "topochico.jpg"
+		},
+		{
+			"id": 26,
+			"imagePath": "voss.jpg"
+		},
+		{
+			"id": 27,
+			"imagePath": "tap.jpg"
+		}
+	]
+}
