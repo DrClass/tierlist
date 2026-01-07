@@ -235,7 +235,7 @@ function assignIds(jsonData) {
 function appendNewCSS(css) {
     const link = document.createElement('link');
     link.rel = 'stylesheet';
-    link.href = `/css/${css}.css`;
+    link.href = `./css/${css}.css`;
     document.head.appendChild(link);
 }
 
