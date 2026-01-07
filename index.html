@@ -1,54 +1,56 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./stylesheetv2.css"/>
-		<script src="https://cdn.jsdelivr.net/npm/muuri@0.9.5/dist/muuri.min.js"></script>
-		<script>
-			var script = document.createElement('script');
-			script.src = './scriptv3.js?t=' + new Date().getTime();
-			document.head.appendChild(script);
-		</script>
-		<!-- <script src="./scriptv3.js"></script> -->
-	</head>
-	<body>
-		<h1 class="title"></h1>
-		<h6 class="title"></h6>
-		<button onclick="clearCache()" id="debugButton">Debug: Clear Cache</button>
-		<button id="shareButton">Share Ranking</button>
-		<div class="preview-container">
-			<img src="./images/placeholder.jpg" />
-			<p id="preview-text"></p>
-		</div>
-		<div class="drag-container"></div>
-		<div id="ranks"></div>
-		<p class="spacer"></p>
-		<div class="board-column bank" style="visibility:hidden;">
-			<div class="board-column-content" id="itemBank"></div>
-		</div>
-		<div id="popupModal" class="modal">
-			<div class="modal-content">
-				<span class="close-btn" id="closePopup">&times;</span>
-				<p>Copy the link below:</p>
-				<div>
-					<span class="link" id="currentUrl"></span>
-					<div id="copyMessage">Copied to clipboard.</div>
-					<button class="button" id="copyBtn">Copy</button>
-				</div>
-			</div>
-		</div>
-		<div id="blockingModal" class="modal" style="background-color:transparent;">
-			<div class="readOnlyBanner">
-				<span>READ ONLY MODE</span>
-			</div>
-			<div class="modal-content" id="editModal" style="display:none;">
-				<span class="close-btn" id="closeReadOnlyPopup">&times;</span>
-				<p>Editing this list will override your locally saved version. Are you sure you want to edit this list?</p>
-				<div>
-					<button class="button" id="confirmBtn">Yes</button>
-					<button class="button" id="denyBtn">No</button>
-				</div>
-			</div>
-		</div>
-		<div class="version"><span></span></div>
-	</body>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="./main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/plugins/SortableMultiDrag/Sortable.multiDrag.min.js"></script>
+        <script type="module" src="./main.js"></script>
+        <meta name="version" content="1.1.0">
+    </head>
+    <body>
+        <div id="preview-mode-wrapper">
+            <div id="banner">
+                <span>PREVIEW ONLY MODE</span>
+            </div>
+            <div id="preview-mode-blocker"></div>
+            <div id="preview-mode-modal-wrapper">
+                <div class="modal" id="preview-mode-model">
+                    <div class="modal-close" id="preview-mode-modal-close"><i class="fa-solid fa-xmark"></i></div>
+                    <span>You are currently previewing another list. You cannot directly edit this list. Editing this list will override any locally saved list if it exists.</span>
+                    <div>
+                        <button class="button" id="edit-button"><i class="fa-solid fa-pen-to-square"></i>&nbsp;&nbsp;Edit this list</button>
+                        <button class="button" id="new-button"><i class="fa-solid fa-circle-plus"></i>&nbsp;&nbsp;Create new list</button>
+                        <button class="button" id="close-button"><i class="fa-solid fa-rotate-left"></i>&nbsp;&nbsp;Preview this list</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="share-modal-wrapper">
+            <div class="modal" id="share-model">
+                <div class="modal-close" id="share-modal-close"><i class="fa-solid fa-xmark"></i></div>
+                <span id="share-url">a url should be here</span>
+                <div id="copy-message">Copied to clipboard.</div>
+                <button class="button" id="copy-button"><i class="fa-solid fa-copy"></i>&nbsp;&nbsp;Copy</button>
+            </div>
+        </div>
+        <input type="file" id="file-input" accept=".json" />
+        <div id="app-header">
+            <span id="version-info">version</span>
+            <div id="burger-wrapper">
+                <button id="burger"><i class="fa-solid fa-bars"></i></button>
+                <ul id="burger-menu">
+                    <li class="burger-menu-item" id="share">Share</li>
+                    <li class="burger-menu-item" id="reset">Reset</li>
+                </ul>
+            </div>
+            <h1 id="title" class="header">title</h1>
+            <h5 id="subtitle" class="header">subtitle</h5>
+        </div>
+        <div id="app-body"></div>
+        <div id="preview-wrapper-hidden">
+            <div id="preview-container">
+                <img src="./images/placeholder.jpg" />
+            </div>
+        </div>
+    </body>
 </html>

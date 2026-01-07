@@ -1,0 +1,432 @@
+:root {
+    --version: 2.0.0-alpha;
+    --tier-header-width: 100px;
+    --tier-item-height: 100px;
+    --tier-item-max-width: 230px;
+    /* These settings are the most likely to be changed per list */
+    --body-background-color: #aaa;
+    --item-background-color: #f0f0f0;
+    --tier-background-color: #696969;
+    --toggle-button-color: #333;
+    --collapsed-gradient-color-transparent: #ffffff00;
+    --collapsed-gradient-color-opaque: #ffffffff;
+    --text-color: #000;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+#banner {
+    position: fixed;
+    bottom: 0;
+    background-color: red;
+    width: 100%;
+    height: 25px;
+    z-index: 9999;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*
+body:has(#preview-mode-wrapper) #app-body {
+    padding-bottom: 35px;
+}
+*/
+
+#share-modal-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: none;
+}
+
+#preview-mode-modal-wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: none;
+}
+
+#preview-mode-blocker {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}
+
+#preview-mode-wrapper {
+    display: none;
+}
+
+#share-url {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--tier-background-color);
+    width: calc(100% - 10px);
+    margin-bottom: 10px;
+}
+
+#copy-message {
+    display: none;
+    color: var(--text-color);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Fading effect */
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+}
+
+.button {
+    color: var(--text-color);
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: var(--item-background-color);
+    padding: 8px;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--body-background-color);
+    padding: 10px;
+    padding-top: 26px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.modal-close {
+    position: absolute;
+    right: 3px;
+    top: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--body-background-color);
+}
+
+#version-info {
+    position: absolute;
+    font-size: 10px;
+    left: 2px;
+    top: 2px;
+}
+
+#app-header {
+    width: 100%;
+    visibility: hidden;
+}
+
+#file-input {
+    position: absolute;
+}
+
+#app-body {
+    display: flex;
+    flex-grow: 1;
+    padding: 10px;
+}
+
+#burger-wrapper {
+    right: 0;
+    position: absolute;
+}
+
+#burger {
+    background-color: transparent;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+}
+
+#burger-menu {
+    visibility: hidden;
+    list-style-type: none;
+    background: var(--toggle-button-color);
+    padding: 2px;
+    margin-top: 40px;
+    margin-right: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.burger-menu-item {
+    padding: 5px;
+    cursor: pointer;
+    background: var(--tier-background-color);
+    color: var(--text-color);
+}
+
+#burger-menu.burger-menu-expanded {
+    visibility: visible;
+}
+
+.header {
+    text-align: center;
+}
+
+.tierlist-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.tierlist-container.alt-bank-position {
+    flex-direction: row;
+    columns: 2;
+}
+
+.tierlist-container.alt-bank-position > * {
+    flex: 1;
+}
+
+.tiers {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.tier {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--tier-background-color);
+}
+
+.tier h2 {
+    flex: none;
+    height: 100%;
+    width: var(--tier-header-width);
+    margin: 0;
+    /* Dumb hack to get the text to center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tier .item-wrapper .item {
+    position: relative;
+    height: var(--tier-item-height);
+    min-width: 50px;
+    max-width: var(--tier-item-max-width);
+    background-color: var(--item-background-color);
+    cursor: grab;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tier .item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: flex-start;
+    min-height: var(--tier-item-height);
+    width: 100%;
+    position: relative;
+    left: calc(-1 * var(--tier-header-width));
+    padding: 5px;
+    padding-left: calc(var(--tier-header-width) + 5px);
+    margin-right: calc(-1 * var(--tier-header-width));
+}
+
+.tier .toggle {
+    position: absolute;
+    padding: 6px;
+    background: none;
+    border: none;
+    color: var(--toggle-button-color);
+    font-size: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.tier-toggle {
+    left: calc(var(--tier-header-width) - 20px);
+}
+
+.bank-toggle {
+    right: 10px;
+}
+
+.tier.collapsed .item-wrapper {
+    max-height: calc(var(--tier-item-height) + 10px + 20px); /* row height + padding gap + arbitrary amount */
+    overflow: hidden;
+    position: relative;
+}
+
+.tier.collapsed.is-overflowing .item-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--tier-header-width);
+    right: 0;
+    height: 30px;
+    background: linear-gradient(to bottom, var(--collapsed-gradient-color-transparent) 0%, var(--collapsed-gradient-color-opaque) 100%);
+    pointer-events: none;
+}
+
+.tier.collapsed .toggle .fa-caret-down {
+  transform: rotate(-90deg);
+}
+
+.selected {
+    outline: 3px solid #00aaff;
+}
+
+.tier .item-wrapper .item img {
+    max-height: 100px;
+    max-width: var(--tier-item-max-width);
+}
+
+.tier .item-wrapper .item span {
+    position: absolute;
+    padding: 2px;
+    bottom: 0;
+    left: 0;
+    width: calc(100% - 4px);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1;
+    background-color: #00000033;
+    color: #111;
+    text-shadow: 1px 1px 2px #ffffffaa, 1px -1px 2px #ffffffaa, -1px 1px 2px #ffffffaa, -1px -1px 2px #ffffffaa;
+}
+
+#preview-wrapper-hidden {
+    visibility: hidden;
+}
+
+#preview-container {
+    position: absolute;
+    z-index: 10;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#preview-container img {
+	max-height: 500px;
+	max-width: 500px;
+}
+
+.sortable-drag #preview-container {
+    visibility: hidden;
+}
+
+.picker-container {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    flex-direction: row;
+    columns: 2;
+}
+
+.picker-container > * {
+    flex: 1;
+}
+
+.picker-option-column {
+    background-color: red;
+    display: flex;
+    justify-content: center;
+}
+
+.picker-favorite-column {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+}
+
+.picker-option-wrapper {
+    background-color: blue;
+    width: calc((100px * 5) + (5px * 6)); /* TODO: This needs to be made to use variables */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.picker-option-container {
+    background-color: orange;
+    text-align: center;
+    padding: 2.5px;
+    margin: 0px;
+}
+
+.picker-favorites {
+    align-items: normal;
+    justify-content: left;
+    text-align: left;
+}
+
+.picker-option {
+    background-color: green;
+    display: inline-block;
+    vertical-align: top;
+    margin: 2.5px;
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+}
+
+.picker-option-img {
+    max-height: 96%;
+    max-width: 96%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+}
+
+.picker-info-wrapper {
+    background-color: purple;
+    margin-top: 10px;
+}
+
+.picker-button {
+    
+}
+
+#picker-button-pick {
+    margin-right: 10px;
+}

@@ -1,16 +1,11 @@
 {
-	"formatVersion": "1.0.0",
-	"listVersion": "1",
-	"listId": "cs2maps",
+	"formatVersion": "2.0.0",
+	"listVersion": "1.0.0",
+	"type": "tierlist",
 	"imagesRoot": "images/cs2maps/",
-	"previewImageMaxHeight": 400,
-	"previewImageMaxWidth": 300,
-	"previewImageMinHeight": -1,
-	"previewImageMinWidth": -1,
 	"enablePreview": true,
 	"enablePreviewText": false,
-	"enableImageText": false,
-	"hideOptionBorder": true,
+	"enableOptionText": false,
 	"title": "CS2 Maps Tier List",
 	"subtitle": "Last Update: 6/6/2025",
 	"ranks": [
@@ -40,66 +35,53 @@
 		}
 	],
 	"optionTemplate": {
-		"id": "1",
+		"id": 1,
+		"autoIdPriorityOffset": 0,
 		"imagePath": "coke.jpg",
 		"imageText": "",
 		"previewImagePath": ""
 	},
 	"options": [
 		{
-			"id": 1,
 			"imagePath": "agency.png"
 		},
 		{
-			"id": 2,
 			"imagePath": "ancient.png"
 		},
 		{
-			"id": 3,
 			"imagePath": "anubis.png"
 		},
 		{
-			"id": 4,
 			"imagePath": "dust2.png"
 		},
 		{
-			"id": 5,
 			"imagePath": "grail.png"
 		},
 		{
-			"id": 6,
 			"imagePath": "inferno.png"
 		},
 		{
-			"id": 7,
 			"imagePath": "italy.png"
 		},
 		{
-			"id": 8,
 			"imagePath": "jura.png"
 		},
 		{
-			"id": 9,
 			"imagePath": "mirage.png"
 		},
 		{
-			"id": 10,
 			"imagePath": "nuke.png"
 		},
 		{
-			"id": 11,
 			"imagePath": "office.png"
 		},
 		{
-			"id": 12,
 			"imagePath": "overpass.png"
 		},
 		{
-			"id": 13,
 			"imagePath": "train.png"
 		},
 		{
-			"id": 14,
 			"imagePath": "vertigo.png"
 		}
 	]

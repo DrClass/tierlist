@@ -1,0 +1,329 @@
+{
+	"formatVersion": "2.0.0",
+	"listVersion": "1.0.0",
+	"type": "tierlist",
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableOptionText": false,
+	"title": "Gunfire Reborn Weapons Tierlist",
+	"subtitle": "Last Update: 11/11/2025",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#D60323"
+		},
+		{
+			"text": "A",
+			"color": "#DF4A17"
+		},
+		{
+			"text": "B",
+			"color": "#E8910C"
+		},
+		{
+			"text": "C",
+			"color": "#F1D800"
+		},
+		{
+			"text": "D",
+			"color": "#82980B"
+		},
+		{
+			"text": "F",
+			"color": "#125716"
+		}
+	],
+	"optionTemplate": {
+		"id": 1,
+		"autoIdPriorityOffset": 0,
+		"imagePath": "coke.jpg",
+		"imageText": "",
+		"previewImagePath": ""
+	},
+	"options": [
+		{
+			"imagePath": "Cavalry.png",
+			"previewImagePath": "Cavalry - Preview.png"
+		},
+		{
+			"imagePath": "Rainbow Arch.png",
+			"previewImagePath": "Rainbow Arch - Preview.png"
+		},
+		{
+			"imagePath": "Crimson Firescale.png",
+			"previewImagePath": "Crimson Firescale - Preview.png"
+		},
+		{
+			"imagePath": "Dragonchaser.png",
+			"previewImagePath": "Dragonchaser - Preview.png"
+		},
+		{
+			"imagePath": "Hexagon.png",
+			"previewImagePath": "Hexagon - Preview.png"
+		},
+		{
+			"imagePath": "Lightning Blast.png",
+			"previewImagePath": "Lightning Blast - Preview.png"
+		},
+		{
+			"imagePath": "Big Hippo.png",
+			"previewImagePath": "Big Hippo - Preview.png"
+		},
+		{
+			"imagePath": "Revealer.png",
+			"previewImagePath": "Revealer - Preview.png"
+		},
+		{
+			"imagePath": "Tracker.png",
+			"previewImagePath": "Tracker - Preview.png"
+		},
+		{
+			"imagePath": "Star Devourer.png",
+			"previewImagePath": "Star Devourer - Preview.png"
+		},
+		{
+			"imagePath": "Angelic Aura.png",
+			"previewImagePath": "Angelic Aura - Preview.png"
+		},
+		{
+			"imagePath": "Dual Fang.png",
+			"previewImagePath": "Dual Fang - Preview.png"
+		},
+		{
+			"imagePath": "Demonlore.png",
+			"previewImagePath": "Demonlore - Preview.png"
+		},
+		{
+			"imagePath": "Scalpel.png",
+			"previewImagePath": "Scalpel - Preview.png"
+		},
+		{
+			"imagePath": "Concealed Ammo.png",
+			"previewImagePath": "Concealed Ammo - Preview.png"
+		},
+		{
+			"imagePath": "Wolf Gaze.png",
+			"previewImagePath": "Wolf Gaze - Preview.png"
+		},
+		{
+			"imagePath": "Sunder.png",
+			"previewImagePath": "Sunder - Preview.png"
+		},
+		{
+			"imagePath": "Foundry.png",
+			"previewImagePath": "Foundry - Preview.png"
+		},
+		{
+			"imagePath": "Scorching Rounds.png",
+			"previewImagePath": "Scorching Rounds - Preview.png"
+		},
+		{
+			"imagePath": "Aura of Venom.png",
+			"previewImagePath": "Aura of Venom - Preview.png"
+		},
+		{
+			"imagePath": "Talisman.png",
+			"previewImagePath": "Talisman - Preview.png"
+		},
+		{
+			"imagePath": "Icy Spear.png",
+			"previewImagePath": "Icy Spear - Preview.png"
+		},
+		{
+			"imagePath": "Cloud Weaver.png",
+			"previewImagePath": "Cloud Weaver - Preview.png"
+		},
+		{
+			"imagePath": "Viper Sight.png",
+			"previewImagePath": "Viper Sight - Preview.png"
+		},
+		{
+			"imagePath": "Star Ring.png",
+			"previewImagePath": "Star Ring - Preview.png"
+		},
+		{
+			"imagePath": "Prism.png",
+			"previewImagePath": "Prism - Preview.png"
+		},
+		{
+			"imagePath": "Glimmering.png",
+			"previewImagePath": "Glimmering - Preview.png"
+		},
+		{
+			"imagePath": "Arc Light.png",
+			"previewImagePath": "Arc Light - Preview.png"
+		},
+		{
+			"imagePath": "Hell.png",
+			"previewImagePath": "Hell - Preview.png"
+		},
+		{
+			"imagePath": "Illusion.png",
+			"previewImagePath": "Illusion - Preview.png"
+		},
+		{
+			"imagePath": "Argus.png",
+			"previewImagePath": "Argus - Preview.png"
+		},
+		{
+			"imagePath": "Pupil.png",
+			"previewImagePath": "Pupil - Preview.png"
+		},
+		{
+			"imagePath": "Wild Hunt.png",
+			"previewImagePath": "Wild Hunt - Preview.png"
+		},
+		{
+			"imagePath": "Porcupine.png",
+			"previewImagePath": "Porcupine - Preview.png"
+		},
+		{
+			"imagePath": "Wheel Saw.png",
+			"previewImagePath": "Wheel Saw - Preview.png"
+		},
+		{
+			"imagePath": "Jackpot.png",
+			"previewImagePath": "Jackpot - Preview.png"
+		},
+		{
+			"imagePath": "Brick.png",
+			"previewImagePath": "Brick - Preview.png"
+		},
+		{
+			"imagePath": "Piercing Flame.png",
+			"previewImagePath": "Piercing Flame - Preview.png"
+		},
+		{
+			"imagePath": "Double Caliber.png",
+			"previewImagePath": "Double Caliber - Preview.png"
+		},
+		{
+			"imagePath": "Goshawk.png",
+			"previewImagePath": "Goshawk - Preview.png"
+		},
+		{
+			"imagePath": "Woodpecker.png",
+			"previewImagePath": "Woodpecker - Preview.png"
+		},
+		{
+			"imagePath": "Golden Bow.png",
+			"previewImagePath": "Golden Bow - Preview.png"
+		},
+		{
+			"imagePath": "Bloody Drill.png",
+			"previewImagePath": "Bloody Drill - Preview.png"
+		},
+		{
+			"imagePath": "Sting.png",
+			"previewImagePath": "Sting - Preview.png"
+		},
+		{
+			"imagePath": "Strike Wing.png",
+			"previewImagePath": "Strike Wing - Preview.png"
+		},
+		{
+			"imagePath": "Lightning Ksana.png",
+			"previewImagePath": "Lightning Ksana - Preview.png"
+		},
+		{
+			"imagePath": "Drift Shard.png",
+			"previewImagePath": "Drift Shard - Preview.png"
+		},
+		{
+			"imagePath": "Thunder Storm.png",
+			"previewImagePath": "Thunder Storm - Preview.png"
+		},
+		{
+			"imagePath": "Tiger Cannon.png",
+			"previewImagePath": "Tiger Cannon - Preview.png"
+		},
+		{
+			"imagePath": "Frenzied Shark.png",
+			"previewImagePath": "Frenzied Shark - Preview.png"
+		},
+		{
+			"imagePath": "Shrieker.png",
+			"previewImagePath": "Shrieker - Preview.png"
+		},
+		{
+			"imagePath": "Bone Dragon.png",
+			"previewImagePath": "Bone Dragon - Preview.png"
+		},
+		{
+			"imagePath": "Justice.png",
+			"previewImagePath": "Justice - Preview.png"
+		},
+		{
+			"imagePath": "Deafening Mortar.png",
+			"previewImagePath": "Deafening Mortar - Preview.png"
+		},
+		{
+			"imagePath": "Dragon Breath.png",
+			"previewImagePath": "Dragon Breath - Preview.png"
+		},
+		{
+			"imagePath": "Tempest.png",
+			"previewImagePath": "Tempest - Preview.png"
+		},
+		{
+			"imagePath": "Jet Octopus.png",
+			"previewImagePath": "Jet Octopus - Preview.png"
+		},
+		{
+			"imagePath": "Laser Gloves.png",
+			"previewImagePath": "Laser Gloves - Preview.png"
+		},
+		{
+			"imagePath": "Thunderclap Gloves.png",
+			"previewImagePath": "Thunderclap Gloves - Preview.png"
+		},
+		{
+			"imagePath": "Rainbow.png",
+			"previewImagePath": "Rainbow - Preview.png"
+		},
+		{
+			"imagePath": "Fire Dragon.png",
+			"previewImagePath": "Fire Dragon - Preview.png"
+		},
+		{
+			"imagePath": "Radioactive Gauntlet.png",
+			"previewImagePath": "Radioactive Gauntlet - Preview.png"
+		},
+		{
+			"imagePath": "Clawspray.png",
+			"previewImagePath": "Clawspray - Preview.png"
+		},
+		{
+			"imagePath": "Fire Tower.png",
+			"previewImagePath": "Fire Tower - Preview.png"
+		},
+		{
+			"imagePath": "Flowing Light.png",
+			"previewImagePath": "Flowing Light - Preview.png"
+		},
+		{
+			"imagePath": "Poisonous Ghost.png",
+			"previewImagePath": "Poisonous Ghost - Preview.png"
+		},
+		{
+			"imagePath": "Storm Chaser.png",
+			"previewImagePath": "Storm Chaser - Preview.png"
+		},
+		{
+			"imagePath": "Phoenix Roar.png",
+			"previewImagePath": "Phoenix Roar - Preview.png"
+		},
+		{
+			"imagePath": "Starfly.png",
+			"previewImagePath": "Starfly - Preview.png"
+		},
+		{
+			"imagePath": "Crane Chant.png",
+			"previewImagePath": "Crane Chant - Preview.png"
+		},
+		{
+			"imagePath": "Armillary Sash.png",
+			"previewImagePath": "Armillary Sash - Preview.png"
+		}
+	]
+}
