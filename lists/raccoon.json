@@ -1,0 +1,125 @@
+{
+	"formatVersion": "2.0.0",
+	"listVersion": "1.0.0",
+	"type": "tierlist",
+	"imagesRoot": "images/raccoon/",
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableOptionText": false,
+	"title": "Raccoons Tier List",
+	"subtitle": "",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#FF7F7F"
+		},
+		{
+			"text": "A",
+			"color": "#FFBE7F"
+		},
+		{
+			"text": "B",
+			"color": "#FFDF7F"
+		},
+		{
+			"text": "C",
+			"color": "#FFFF7F"
+		},
+		{
+			"text": "D",
+			"color": "#BEFE7E"
+		},
+		{
+			"text": "F",
+			"color": "#7FFE7F"
+		}
+	],
+	"optionTemplate": {
+		"id": 1,
+		"autoIdPriorityOffset": 0,
+		"imagePath": "coke.jpg",
+		"imageText": "",
+		"previewImagePath": ""
+	},
+	"options": [
+		{
+			"imagePath": "trash.gif"
+		},
+		{
+			"imagePath": "bounce.gif"
+		},
+		{
+			"imagePath": "bubble.gif"
+		},
+		{
+			"imagePath": "candy.gif"
+		},
+		{
+			"imagePath": "cheeto.gif"
+		},
+		{
+			"imagePath": "grapes.gif"
+		},
+		{
+			"imagePath": "hide.gif"
+		},
+		{
+			"imagePath": "hug.gif"
+		},
+		{
+			"imagePath": "jump.gif"
+		},
+		{
+			"imagePath": "munchie.gif"
+		},
+		{
+			"imagePath": "noms.gif"
+		},
+		{
+			"imagePath": "pedro.gif"
+		},
+		{
+			"imagePath": "rubs.gif"
+		},
+		{
+			"imagePath": "scooter.gif"
+		},
+		{
+			"imagePath": "shower.gif"
+		},
+		{
+			"imagePath": "soapy.gif"
+		},
+		{
+			"imagePath": "sprinkler.gif"
+		},
+		{
+			"imagePath": "roll.gif"
+		},
+		{
+			"imagePath": "dizzy.gif"
+		},
+		{
+			"imagePath": "math.gif"
+		},
+		{
+			"imagePath": "yap.gif"
+		},
+		{
+			"imagePath": "trio.gif"
+		},
+		{
+			"imagePath": "waggon.gif"
+		},
+		{
+			"imagePath": "air.gif"
+		},
+		{
+			"imagePath": "sleepy.gif"
+		},
+		{
+			"imagePath": "duo.gif"
+		}
+		
+	]
+}

@@ -94,10 +94,13 @@ window.onload = function() {
         document.getElementById('preview-mode-modal-wrapper').style.display = 'block';
     });
     document.getElementById('preview-mode-modal-close').addEventListener('click', () => {
-        document.getElementById('preview-mode-modal-wrapper').style.display = 'hidden';
+        document.getElementById('preview-mode-modal-wrapper').style.display = 'none';
     });
     document.getElementById('close-button').addEventListener('click', () => {
-        document.getElementById('preview-mode-modal-wrapper').style.display = 'hidden';
+        document.getElementById('preview-mode-modal-wrapper').style.display = 'none';
+    });
+    document.getElementById('preview-mode-modal-wrapper').addEventListener('click', () => {
+        document.getElementById('preview-mode-modal-wrapper').style.display = 'none';
     });
     document.getElementById('edit-button').addEventListener('click', () => {
         saveTierList();
