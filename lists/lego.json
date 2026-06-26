@@ -1,0 +1,166 @@
+{
+	"formatVersion": "2.0.0",
+	"listVersion": "1.0.0",
+	"type": "tierlist",
+	"imagesRoot": "images/lego/",
+	"enablePreview": true,
+	"enablePreviewText": false,
+	"enableOptionText": false,
+	"title": "Lego Tier List",
+	"subtitle": "",
+	"ranks": [
+		{
+			"text": "S",
+			"color": "#FF7F7F"
+		},
+		{
+			"text": "A",
+			"color": "#FFBE7F"
+		},
+		{
+			"text": "B",
+			"color": "#FFDF7F"
+		},
+		{
+			"text": "C",
+			"color": "#FFFF7F"
+		},
+		{
+			"text": "D",
+			"color": "#BEFE7E"
+		},
+		{
+			"text": "F",
+			"color": "#7FFE7F"
+		}
+	],
+	"optionTemplate": {
+		"id": 1,
+		"autoIdPriorityOffset": 0,
+		"imagePath": "coke.jpg",
+		"imageText": "",
+		"previewImagePath": ""
+	},
+	"options": [
+		{
+			"imagePath": "3005.png"
+		},
+		{
+			"imagePath": "3004.png"
+		},
+		{
+			"imagePath": "3622.png"
+		},
+		{
+			"imagePath": "3010.png"
+		},
+		{
+			"imagePath": "3009.png"
+		},
+		{
+			"imagePath": "3003.png"
+		},
+		{
+			"imagePath": "3002.png"
+		},
+		{
+			"imagePath": "3001.png"
+		},
+		{
+			"imagePath": "2456.png"
+		},
+		{
+			"imagePath": "2357.png"
+		},
+		{
+			"imagePath": "3040.png"
+		},
+		{
+			"imagePath": "3039.png"
+		},
+		{
+			"imagePath": "3298.png"
+		},
+		{
+			"imagePath": "3024.png"
+		},
+		{
+			"imagePath": "3023.png"
+		},
+		{
+			"imagePath": "3623.png"
+		},
+		{
+			"imagePath": "3666.png"
+		},
+		{
+			"imagePath": "3022.png"
+		},
+		{
+			"imagePath": "3021.png"
+		},
+		{
+			"imagePath": "3020.png"
+		},
+		{
+			"imagePath": "3795.png"
+		},
+		{
+			"imagePath": "2420.png"
+		},
+		{
+			"imagePath": "4032.png"
+		},
+		{
+			"imagePath": "3794b.png"
+		},
+		{
+			"imagePath": "3070.png"
+		},
+		{
+			"imagePath": "3069.png"
+		},
+		{
+			"imagePath": "63864.png"
+		},
+		{
+			"imagePath": "2431.png"
+		},
+		{
+			"imagePath": "3068.png"
+		},
+		{
+			"imagePath": "87079.png"
+		},
+		{
+			"imagePath": "4073.png"
+		},
+		{
+			"imagePath": "98138.png"
+		},
+		{
+			"imagePath": "54200.png"
+		},
+		{
+			"imagePath": "4865.png"
+		},
+		{
+			"imagePath": "4740.png"
+		},
+		{
+			"imagePath": "4589.png"
+		},
+		{
+			"imagePath": "4070.png"
+		},
+		{
+			"imagePath": "3062.png"
+		},
+		{
+			"imagePath": "3626.png"
+		},
+		{
+			"imagePath": "3899.png"
+		}
+	]
+}
